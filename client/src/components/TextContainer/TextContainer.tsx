@@ -9,27 +9,21 @@ const TextContainer = ({ users }: { users: any }) => {
     <div className="textContainer">
       <div>
         <h1>
-          Realtime Chat Application{" "}
+          Realtime Chat Demo{" "}
           <span role="img" aria-label="emoji">
             💬
           </span>
         </h1>
         <h2>
-          Created with React, Express, Node and Socket.IO{" "}
+          Công nghệ sử dụng: React, Express, Node và Socket.IO{" "}
           <span role="img" aria-label="emoji">
             ❤️
-          </span>
-        </h2>
-        <h2>
-          Try it out right now!{" "}
-          <span role="img" aria-label="emoji">
-            ⬅️
           </span>
         </h2>
       </div>
       {users ? (
         <div>
-          <h1>People currently chatting:</h1>
+          <h1>Những người hiện đang trò chuyện:</h1>
           <div className="activeContainer">
             <h2>
               {users.map(({ name }: { name: any }) => (
