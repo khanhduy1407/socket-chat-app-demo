@@ -1,3 +1,4 @@
+// @ts-ignore
 import ScrollToBottom from "react-scroll-to-bottom";
 
 import "./Messages.css";

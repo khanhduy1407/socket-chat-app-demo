@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import queryString from "query-string";
+// @ts-ignore
 import io from "socket.io-client";
 
 import "./Chat.css";
