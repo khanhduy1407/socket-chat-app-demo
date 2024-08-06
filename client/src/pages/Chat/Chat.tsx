@@ -14,7 +14,7 @@ const Chat = ({ location }: { location: any }) => {
   const [message, setMessage] = useState<any>("");
   const [messages, setMessages] = useState<any>([]);
 
-  const ENDPOINT: string = "localhost:5000";
+  const ENDPOINT: string = import.meta.env.LAHM_API_ENDPOINT;
 
   useEffect(() => {
     const { name, room } = queryString.parse(location.search);
