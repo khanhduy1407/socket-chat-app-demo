@@ -25,8 +25,11 @@ const Chat = ({ location }: { location: any }) => {
     setName(name);
     setRoom(room);
 
-    socket.emit("join", { name, room }, () => {
-      //
+    socket.emit("join", { name, room }, (response: { error?: string }) => {
+      if (response) {
+        alert(response);
+        window.location.replace("/");
+      }
     });
 
     return () => {
@@ -54,8 +57,6 @@ const Chat = ({ location }: { location: any }) => {
       socket.emit("sendMessage", message, () => setMessage(""));
     }
   };
-
-  console.log(message, messages);
 
   return (
     <div className="outerContainer">

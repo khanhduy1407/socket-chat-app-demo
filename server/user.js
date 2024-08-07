@@ -10,7 +10,10 @@ const addUser = ({ id, name, room }) => {
   );
 
   if (existingUser) {
-    return { error: "Tên này đang có trong phòng." };
+    return {
+      error:
+        "Tên người dùng này hiện đang có trong phòng. Vui lòng thử lại với tên khác!",
+    };
   }
 
   const user = { id, name, room };
